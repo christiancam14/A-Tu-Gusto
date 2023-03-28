@@ -1,0 +1,132 @@
+@font-face {
+    font-family: Amsi;
+    src:
+        url('/assets/fonts/AmsiPro-Regular.otf'),
+        url('/assets/fonts/AmsiPro-Bold.otf'),
+        url('/assets/fonts/AmsiPro-Black.otf')
+}
+
+@font-face {
+    font-family: Amsi-bold;
+    src:
+        url('/assets/fonts/AmsiPro-Regular.otf'),
+        url('/assets/fonts/AmsiPro-Bold.otf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Amsi';
+    list-style: none;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal_tit {
+    position: relative;
+    transform: translateX(0px);
+    opacity: 0;
+    transition: 1s all linear;
+}
+
+.reveal_tit.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contenedor-1200 {
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+.scroll-container {
+    overflow: auto;
+    -webkit-scroll-snap-type: y mandatory;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-area {
+    scroll-snap-align: start;
+}
+
+
+/* Comienzo estilos */
+
+.scroll-container > section {
+    height: 100vh;
+    display: inline-block;
+    /* height: 80%; */
+    border-radius: 10%;
+    margin: 5px;
+    /* scroll-snap-align: center; */
+    scroll-snap-align: start;
+    border: 1px solid #00c6da;
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px
+}
+
+header nav li {
+    list-style: none;
+    position: relative;
+}
+
+header a {
+    color: #00c6da;
+    font-weight: 400;
+    transition: all .25s ease-in-out;
+    font-size: 18px;
+}
+
+header a:not(.ancla-principal)::after {
+    content: " ";
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 0%;
+    opacity: 0;
+    border-bottom: 0px solid #00c6da;
+    transition: border-bottom .15s linear, width .15s linear, opacity .25s linear;
+}
+
+header a:not(.ancla-principal):hover::after {
+    width: 100%;
+    opacity: 1;
+    border-bottom: 2px solid #00c6da;
+}
+
+header a.ancla-principal {
+    font-size: 28px;
+}

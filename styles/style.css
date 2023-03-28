@@ -1,9 +1,24 @@
+@font-face {
+    font-family: Amsi;
+    src: 
+    url('/assets/fonts/AmsiPro-Regular.otf'),
+    url('/assets/fonts/AmsiPro-Bold.otf'),
+    url('/assets/fonts/AmsiPro-Black.otf')
+}
+
+@font-face {
+    font-family: Amsi-bold;
+    src: 
+    url('/assets/fonts/AmsiPro-Regular.otf'),
+    url('/assets/fonts/AmsiPro-Bold.otf')
+}
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'Amsi';
 }
 
 .reveal {
@@ -47,13 +62,41 @@ header nav {
     gap: 20px;
 }
 
-header a {
-    color: #BD3662;
-    font-weight: 600;
-    transition: all .25s ease-in-out;
+header nav ul{
+    display: flex;
+    gap: 20px
 }
 
-header a.ancla-principal{
+header nav li{
+    list-style: none;
+    position: relative;
+}
+
+header a {
+    color: #00c6da;
+    font-weight: 400;
+    transition: all .25s ease-in-out;
+    font-size: 18px;
+}
+
+header a:not(.ancla-principal)::after {
+    content: " ";
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    width: 0%;
+    opacity: 0;
+    border-bottom: 0px solid #00c6da;
+    transition: border-bottom .15s linear, width .15s linear, opacity .25s linear;
+}
+
+header a:not(.ancla-principal):hover::after {
+    width: 100%;
+    opacity: 1;
+    border-bottom: 2px solid #00c6da;
+}
+
+header a.ancla-principal {
     font-size: 28px;
 }
 
@@ -67,15 +110,6 @@ header .contenedor-1200 {
     justify-content: space-evenly;
 }
 
-body {
-    background-image: linear-gradient(0deg,
-            hsl(324deg 65% 90%) 0%,
-            hsl(202deg 100% 86%) 13%,
-            hsl(244deg 99% 93%) 33%,
-            hsl(244deg 99% 93%) 58%,
-            hsl(202deg 100% 86%) 83%,
-            hsl(324deg 65% 90%) 100%);
-}
 
 .contenedor-1200 {
     width: 100%;
@@ -95,6 +129,10 @@ article.tarjeta {
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 article.contenido {
@@ -108,7 +146,7 @@ section.tarjeta {
     scroll-snap-align: start;
     position: relative;
     z-index: 10;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -125,14 +163,29 @@ section.tarjeta .descripcion-producto {
     font-size: 18px;
 }
 
+section.tarjeta .contenedor-imagen{
+    animation: flotar 2s ease-in-out infinite;
+    /* width: 40%; */
+}
+
+section.tarjeta .contenedor-imagen:hover{
+    /* animation-play-state: paused; */
+}
+
 section.tarjeta .img-producto {
     height: 600px;
     filter: drop-shadow(-5px 4px 10px rgba(0, 0, 0, 0.3));
+    /* transition: all .15s ease-in-out infinite; */
+}
+
+section.tarjeta .img-producto:hover {
+    transform: rotate(2deg);
+    height: 610px;
 }
 
 .titulo-producto {
     font-size: 50px;
-    color: #BD3662;
+    color: rgb(248, 83, 123);;
 }
 
 .contenedor-precio {
@@ -150,7 +203,7 @@ section.tarjeta .img-producto {
     color: white;
     font-size: 22px;
     top: 40%;
-    left: 20px;
+    left: 12px;
 }
 
 section.tarjeta .contenedor-1200 {
@@ -167,10 +220,27 @@ section.tarjeta .contenedor-1200 {
     text-align: center;
     font-size: 80px;
     margin-top: 140px;
-    color: mistyrose;
-    color: aliceblue;
-    font-family: 'Alkatra', cursive;
-    font-family: 'Montserrat';
+    color: #00c6da;
+    font-family: "Amsi-bold";
 
 }
 
+.bola-uno{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

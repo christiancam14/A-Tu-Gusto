@@ -17,11 +17,8 @@
 <body>
     <header>
         <div class="contenedor-1200">
-            <!-- <a href="#" class="ancla-principal">A tu gusto</a>
-            <a href="#" class="ancla-principal"><img src="/assets/logo-transparente.png" width="100px"></a>
-            <a href="#" class="ancla-principal"><img src="/assets/logo-ALICIA.png" width="100px"></a> -->
             <a href="#" class="ancla-principal"><img src="/assets/logo-principal.png" height="80px"></a>
-            <nav>
+            <nav style="display: none">
                 <ul>
                     <li>
                         <a href="#menu_infantil" class="">Menu Infantil</a>
@@ -39,153 +36,20 @@
             </nav>
         </div>
     </header>
-    <section class="principal" style="background-image: linear-gradient(
-        0deg,
-        hsl(0deg 0% 100%) 0%,
-        hsl(185deg 100% 96%) 24%,
-        hsl(185deg 100% 93%) 52%,
-        hsl(185deg 100% 93%) 75%,
-        hsl(185deg 100% 96%) 90%,
-        hsl(0deg 0% 100%) 100%
-      );">
+    <section class="principal fondo-azul">
         <div class="contenedor-1200">
             <h1 class="titulo-principal">Heladería a tu gusto</h1>
         </div>
-
-        <svg viewBox="0 0 100 100" class="bola-uno" style="display: none;">
-            <defs>
-                <linearGradient id="ice-cream-gradient" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop offset="0%" stop-color="#f2b790" />
-                    <stop offset="100%" stop-color="#e55e42" />
-                </linearGradient>
-                <radialGradient id="drip-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                    <stop offset="0%" stop-color="#e55e42" />
-                    <stop offset="100%" stop-color="#dc493a" />
-                </radialGradient>
-            </defs>
-            <circle cx="50" cy="50" r="40" fill="url(#ice-cream-gradient)" />
-            <path d="M 50 70 Q 25 70 25 80 Q 25 90 53 90 Q 80 90 80 80 Q 80 70 55 70" fill="url(#drip-gradient)" />
-        </svg>
-
-        <svg viewBox="0 0 100 100" class="bola-uno" style="display: none;">
-            <defs>
-                <linearGradient id="ice-cream-gradient" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop offset="0%" stop-color="#f2b790" />
-                    <stop offset="100%" stop-color="#e55e42" />
-                </linearGradient>
-                <radialGradient id="drip-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                    <stop offset="0%" stop-color="#e55e42" />
-                    <stop offset="100%" stop-color="#dc493a" />
-                </radialGradient>
-            </defs>
-            <circle cx="50" cy="50" r="40" fill="url(#ice-cream-gradient)" />
-            <path d="M 50 70 Q 25 70 25 80 Q 25 90 53 90 Q 80 90 80 80 Q 80 70 55 70" fill="url(#drip-gradient)" />
-            <circle cx="35" cy="60" r="4" fill="#f2b790">
-                <animate attributeName="cy" from="60" to="70" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="r" from="4" to="2" dur="1s" repeatCount="indefinite" />
-            </circle>
-            <circle cx="50" cy="65" r="3" fill="#f2b790">
-                <animate attributeName="cy" from="65" to="75" dur="2s" repeatCount="indefinite" />
-                <animate attributeName="r" from="3" to="1.5" dur="2s" repeatCount="indefinite" />
-            </circle>
-            <circle cx="65" cy="62" r="2" fill="#f2b790">
-                <animate attributeName="cy" from="62" to="72" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="r" from="2" to="1" dur="1s" repeatCount="indefinite" />
-            </circle>
-        </svg>
-
-        <svg viewBox="0 0 100 100">
-            <defs>
-                <linearGradient id="ice-cream-gradient" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop offset="0%" stop-color="#f2b790" />
-                    <stop offset="100%" stop-color="#e55e42" />
-                </linearGradient>
-                <radialGradient id="drip-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                    <stop offset="0%" stop-color="#e55e42" />
-                    <stop offset="100%" stop-color="#dc493a" />
-                </radialGradient>
-            </defs>
-            <circle cx="50" cy="50" r="40" fill="url(#ice-cream-gradient)" />
-            <path d="M50,70 Q30,70 20,80 Q30,90 50,90 Q70,90 80,80 Q70,70 50,70" fill="url(#drip-gradient)" />
-            <circle cx="35" cy="60" r="4" fill="#f2b790" opacity="0">
-                <animate attributeName="cy" from="60" to="70" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="r" from="4" to="2" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0s" fill="freeze" />
-                <animate attributeName="opacity" from="1" to="0" dur="0.5s" begin="0.5s" fill="freeze" />
-            </circle>
-            <circle cx="50" cy="65" r="3" fill="#f2b790" opacity="0">
-                <animate attributeName="cy" from="65" to="75" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="r" from="3" to="1.5" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0s" fill="freeze" />
-                <animate attributeName="opacity" from="1" to="0" dur="0.5s" begin="0.5s" fill="freeze" />
-            </circle>
-            <circle cx="65" cy="62" r="2" fill="#f2b790" opacity="0">
-                <animate attributeName="cy" from="62" to="72" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="r" from="2" to="1" dur="1s" repeatCount="indefinite" />
-                <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0s" fill="freeze" />
-                <animate attributeName="opacity" from="1" to="0" dur="0.5s" begin="0.5s" fill="freeze" />
-            </circle>
-        </svg>
-
 
     </section>
 
     <article class="contenido">
 
+        <!-- Platos -->
 
-        <section id="menu_infantil" class="tarjeta primera" style="background-image: linear-gradient(
-            0deg,
-            hsl(0deg 0% 100%) 0%,
-            hsl(347deg 100% 98%) 24%,
-            hsl(346deg 100% 97%) 52%,
-            hsl(346deg 100% 97%) 75%,
-            hsl(347deg 100% 98%) 90%,
-            hsl(0deg 0% 100%) 100%
-          );">
+        <!-- Milkshakes -->
 
-            <div class="contenedor-1200">
-                <article class="tarjeta">
-
-                    <div class="contenedor-imagen">
-                        <img src="/assets/fresas.webp" alt="Fresas con crema" class="img-producto reveal">
-                    </div>
-                    <div class="contenedor-inf">
-                        <h2 class="titulo-producto reveal">Fresas con crema</h2>
-                        <p class="descripcion-producto reveal">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet dignissimos incidunt
-                            vero,
-                            aliquid dolores architecto? Nam numquam obcaecati cumque, atque inventore veritatis error
-                            asperiores at quidem sunt, nemo quis!
-                        </p>
-                        <div class="contenedor-precio reveal">
-                            <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                        <stop id="stop1" stop-color="rgba(255, 83, 125, 1)" offset="0%"></stop>
-                                        <stop id="stop2" stop-color="rgba(255, 110, 125, 1)" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#sw-gradient)"
-                                    d="M21.8,-39.3C27,-34.7,29.1,-26.4,30.6,-19.2C32.1,-12,33.1,-6,32.9,-0.1C32.8,5.8,31.6,11.7,29.1,17.1C26.5,22.6,22.7,27.7,17.7,31.5C12.6,35.3,6.3,37.8,-0.8,39.2C-8,40.6,-15.9,41,-22.6,38.1C-29.2,35.3,-34.6,29.2,-35.5,22.3C-36.4,15.4,-32.8,7.7,-30.7,1.2C-28.5,-5.2,-27.8,-10.4,-26.3,-16.3C-24.9,-22.2,-22.6,-28.7,-18.1,-33.6C-13.5,-38.5,-6.8,-41.8,0.8,-43.1C8.3,-44.4,16.6,-43.8,21.8,-39.3Z"
-                                    width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                    style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
-                            </svg>
-                            <h3 class="precio-producto">$12.000</h3>
-                        </div>
-                    </div>
-
-                </article>
-            </div>
-        </section>
-        <section id="bebidas" class="tarjeta primera" style="background-image: linear-gradient(
-            0deg,
-            hsl(0deg 0% 100%) 0%,
-            hsl(42deg 100% 97%) 24%,
-            hsl(42deg 100% 94%) 52%,
-            hsl(42deg 100% 94%) 75%,
-            hsl(42deg 100% 97%) 90%,
-            hsl(0deg 0% 100%) 100%
-          );">
+        <section id="milkshake_brownie" class="tarjeta primera fondo-cafe">
             <div class="contenedor-1200">
                 <article class="tarjeta">
 
@@ -194,6 +58,7 @@
                     </div>
                     <div class="contenedor-inf">
                         <h2 class="titulo-producto reveal">Milkshake de brownie</h2>
+                        <h3 class="precio-producto">$12.000</h3>
                         <p class="descripcion-producto reveal">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet dignissimos incidunt
                             vero,
@@ -204,15 +69,8 @@
                 </article>
             </div>
         </section>
-        <section id="copas" class="tarjeta primera" style="background-image: linear-gradient(
-            0deg,
-            hsl(0deg 0% 100%) 0%,
-            hsl(347deg 100% 98%) 24%,
-            hsl(346deg 100% 97%) 52%,
-            hsl(346deg 100% 97%) 75%,
-            hsl(347deg 100% 98%) 90%,
-            hsl(0deg 0% 100%) 100%
-          );">
+
+        <section id="milkshake_cono" class="tarjeta primera fondo-rosa">
             <div class="contenedor-1200">
                 <article class="tarjeta">
 
@@ -221,6 +79,7 @@
                     </div>
                     <div class="contenedor-inf">
                         <h2 class="titulo-producto reveal">Milkshake cono</h2>
+                        <h3 class="precio-producto">$12.000</h3>
                         <p class="descripcion-producto reveal">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet dignissimos incidunt
                             vero,
@@ -231,15 +90,36 @@
                 </article>
             </div>
         </section>
-        <section id="malteadas" class="tarjeta primera" style="background-image: linear-gradient(
-            0deg,
-            hsl(0deg 0% 100%) 0%,
-            hsl(42deg 100% 97%) 24%,
-            hsl(42deg 100% 94%) 52%,
-            hsl(42deg 100% 94%) 75%,
-            hsl(42deg 100% 97%) 90%,
-            hsl(0deg 0% 100%) 100%
-          );">
+
+        <!-- Copas -->
+
+        <section id="fresas_con_crema" class="tarjeta primera fondo-rosa">
+
+            <div class="contenedor-1200">
+                <h2 class="titulo-categoria reveal">Copas</h2>
+                <article class="tarjeta">
+
+                    <div class="contenedor-imagen">
+                        <img src="/assets/fresas.webp" alt="Fresas con crema" class="img-producto reveal">
+                    </div>
+                    <div class="contenedor-inf">
+                        <h2 class="titulo-producto reveal">Fresas con crema</h2>
+                        <h3 class="precio-producto">$12.000</h3>
+                        <p class="descripcion-producto reveal">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet dignissimos incidunt
+                            vero,
+                            aliquid dolores architecto? Nam numquam obcaecati cumque, atque inventore veritatis error
+                            asperiores at quidem sunt, nemo quis!
+                        </p>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <!-- Bebidas -->
+
+        <section id="frappe" class="tarjeta primera fondo-cafe">
             <div class="contenedor-1200">
                 <article class="tarjeta">
 
@@ -258,6 +138,10 @@
                 </article>
             </div>
         </section>
+
+        <!-- Infantiles -->
+
+
     </article>
 
     <div class="ocean">

@@ -19,7 +19,6 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Amsi';
-    list-style: none;
 }
 
 .reveal {
@@ -46,38 +45,38 @@
     opacity: 1;
 }
 
-.contenedor-1200 {
-    width: 100%;
-    max-width: 1200px;
-    padding: 16px;
-    margin: 0 auto;
+.fondo-rosa {
+    background-image: linear-gradient(0deg,
+            hsl(0deg 0% 100%) 0%,
+            hsl(347deg 100% 98%) 24%,
+            hsl(346deg 100% 97%) 52%,
+            hsl(346deg 100% 97%) 75%,
+            hsl(347deg 100% 98%) 90%,
+            hsl(0deg 0% 100%) 100%);
 }
 
-.scroll-container {
-    overflow: auto;
-    -webkit-scroll-snap-type: y mandatory;
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
-    display: flex;
-    flex-direction: column;
+.fondo-cafe {
+    background-image: linear-gradient(0deg,
+            hsl(0deg 0% 100%) 0%,
+            hsl(42deg 100% 97%) 24%,
+            hsl(42deg 100% 94%) 52%,
+            hsl(42deg 100% 94%) 75%,
+            hsl(42deg 100% 97%) 90%,
+            hsl(0deg 0% 100%) 100%);
 }
 
-.scroll-area {
-    scroll-snap-align: start;
+.fondo-azul {
+    background-image: linear-gradient(0deg,
+            hsl(0deg 0% 100%) 0%,
+            hsl(185deg 100% 96%) 24%,
+            hsl(185deg 100% 93%) 52%,
+            hsl(185deg 100% 93%) 75%,
+            hsl(185deg 100% 96%) 90%,
+            hsl(0deg 0% 100%) 100%);
 }
 
-
-/* Comienzo estilos */
-
-.scroll-container > section {
-    height: 100vh;
-    display: inline-block;
-    /* height: 80%; */
-    border-radius: 10%;
-    margin: 5px;
-    /* scroll-snap-align: center; */
-    scroll-snap-align: start;
-    border: 1px solid #00c6da;
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -129,4 +128,158 @@ header a:not(.ancla-principal):hover::after {
 
 header a.ancla-principal {
     font-size: 28px;
+}
+
+header nav a:hover {}
+
+header .contenedor-1200 {
+    padding-bottom: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.contenedor-1200 {
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+article.tarjeta {
+    position: sticky;
+    top: 20vh;
+    width: 90%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+article.contenido {
+    overflow: auto;
+    -webkit-scroll-snap-type: y mandatory;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+}
+
+section.tarjeta {
+    scroll-snap-align: start;
+    position: relative;
+    z-index: 10;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+section.tarjeta .contenedor-inf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.tarjeta .descripcion-producto {
+    text-align: center;
+    max-width: 90%;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+section.tarjeta .contenedor-imagen {
+    animation: flotar 2s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    /* width: 40%; */
+}
+
+section.tarjeta .contenedor-imagen:hover {
+    /* animation-play-state: paused; */
+}
+
+section.tarjeta .img-producto {
+    height: 300px;
+    filter: drop-shadow(-5px 4px 10px rgba(0, 0, 0, 0.3));
+    /* transition: all .15s ease-in-out infinite; */
+}
+
+.contenedor-producto{
+    width: 100vw;
+}
+
+section.tarjeta .img-producto:hover {
+    transform: rotate(2deg);
+    /* height: 610px; */
+}
+
+.titulo-producto {
+    font-size: 28px;
+    color: rgb(248, 83, 123);
+}
+
+.titulo-categoria {
+    font-size: 56px;
+    color: rgb(248, 83, 123);
+    font-family: 'Amsi-bold';
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-precio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.precio-producto {
+    color: rgb(248, 83, 123);
+    font-size: 28px;
+    font-weight: 600;
+    top: 40%;
+    left: 12px;
+}
+
+
+.principal {
+    height: 100vh;
+}
+
+.principal .titulo-principal {
+    text-align: center;
+    font-size: 80px;
+    margin-top: 140px;
+    color: #00c6da;
+    font-family: "Amsi-bold";
+
+}
+
+.bola-uno {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
